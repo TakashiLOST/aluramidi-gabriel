@@ -85,6 +85,11 @@ p { margin: 0; }
 .ph.photo { aspect-ratio: 4 / 5; width: 100%; }
 .ph.thumb { aspect-ratio: 16 / 9; width: 100%; }
 .ph.bg { min-height: 0; }
+.photo-real { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border: 1.5px solid var(--ink); display: block; max-width: 100%; }
+.price { font-family: var(--f-display); font-size: 30px; font-weight: 600; line-height: 1; }
+.price small { font-family: var(--f-mono); font-size: 11px; color: var(--ink-soft); font-weight: 400; letter-spacing: .04em; }
+.ok { border-left: 3px solid var(--ink); background: var(--fill); padding: 12px 16px; border-radius: 0 6px 6px 0; font-size: 15px; }
+.ok ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 2px; }
 .lines { display: grid; gap: 8px; }
 .lines i { display: block; height: 8px; background: var(--fill); border-radius: 2px; }
 .lines i:nth-child(3n) { width: 82%; } .lines i:nth-child(4n) { width: 64%; }
@@ -133,8 +138,16 @@ p { margin: 0; }
   <div class="intro">
     <p class="mono">Proposta de wireframes · site one-page</p>
     <h1>Gabriel da Padilha · Cartomancia &amp; Orientação</h1>
-    <p>Estrutura de blocos a partir da copy enviada, na ordem em que aparecem na página. Cada bloco traz o desenho em baixa fidelidade e as anotações de objetivo, conteúdo, comportamento e versão mobile. Os blocos com borda tracejada no mapa são sugestões que não estão na copy.</p>
-    <p class="flag"><strong>Atenção:</strong> o pedido fala em mentoria para gestores de tráfego pago, mas a copy anexada é de atendimentos de cartomancia. Os wireframes seguem a copy. Se a copy certa for outra, a estrutura se adapta.</p>
+    <p>Estrutura de blocos a partir da copy enviada, na ordem em que aparecem na página. Cada bloco traz o desenho em baixa fidelidade e as anotações de objetivo, conteúdo, comportamento e versão mobile. Os blocos com borda tracejada no mapa foram sugeridos fora da copy e já aprovados.</p>
+    <div class="ok"><strong>Versão 2 · decisões aplicadas</strong>
+      <ul>
+        <li>Site de agendamento de cartomancia (copy confirmada).</li>
+        <li>Preços nas cartas: 30 minutos por R$ 80 e 1 hora por R$ 140.</li>
+        <li>Tratamento padronizado em "você", inclusive na bio.</li>
+        <li>Faixa de 3 passos, CTA final, rodapé e botão flutuante aprovados.</li>
+        <li>Fotos reais do Gabriel no hero e no Sobre.</li>
+      </ul>
+    </div>
   </div>
 
   <ol class="map" aria-label="Mapa de blocos">
@@ -177,13 +190,14 @@ p { margin: 0; }
         <p class="sub">Atendimentos místicos e aprofundados via videochamada. Um espaço seguro e individualizado, focado em resolver a sua dor pela raiz.</p>
         <div class="row"><span class="btn solid noicon">Ver Modalidades de Consulta ↓</span></div>
       </div>
-      <div class="ph photo"><span>Foto do Gabriel<br>com as cartas</span></div>
+      <img class="photo-real" src="img/gabriel-estudio.webp" alt="Gabriel da Padilha segurando cartas de tarot em leque diante do rosto, fundo preto com luzes vermelhas">
     </div>
     <aside class="notes">
       <section><h5>Objetivo</h5><p>Em 5 segundos a pessoa entende o que é, como funciona (videochamada) e para onde ir.</p></section>
-      <section><h5>Conteúdo</h5><ul><li>Rótulo curto acima do título (sugestão).</li><li>Título, subtítulo e CTA da copy.</li><li>Foto real do Gabriel. Rosto gera confiança neste nicho.</li></ul></section>
+      <section><h5>Conteúdo</h5><ul><li>Rótulo curto acima do título (sugestão).</li><li>Título, subtítulo e CTA da copy.</li><li>Foto de estúdio (fundo preto, luz vermelha, cartas douradas). É a imagem mais forte e abre o site.</li></ul></section>
       <section><h5>Comportamento</h5><p>O CTA rola até o Bloco 3. Altura definida pelo conteúdo, sem ocupar a tela inteira, para a primeira carta já aparecer no fim da dobra.</p></section>
       <section><h5>Mobile</h5><p>Texto primeiro, foto abaixo (ou como fundo com sobreposição escura).</p></section>
+      <section><h5>Direção visual</h5><p>As fotos já sugerem a paleta do layout final: preto profundo, vermelho e o dourado das cartas.</p></section>
     </aside>
   </article>
 
@@ -200,6 +214,7 @@ p { margin: 0; }
             <span class="sym" aria-hidden="true"></span>
             <h4>Sessão Imersiva</h4>
             <span class="meta">30 min · Individual · Videochamada</span>
+            <span class="price">R$ 80 <small>/ sessão</small></span>
             <p>Ideal para quem busca clareza imediata e direcionamento focado em questões pontuais.</p>
             <ul><li>30 minutos de conversa ao vivo</li><li>Perguntas ilimitadas dentro do tempo</li><li>Gravação da tiragem</li></ul>
             <span class="btn">Agendar 30 Minutos no WhatsApp</span>
@@ -212,6 +227,7 @@ p { margin: 0; }
             <span class="sym" aria-hidden="true"></span>
             <h4>Jornada Completa</h4>
             <span class="meta">1 hora · Profundo · Videochamada</span>
+            <span class="price">R$ 140 <small>/ sessão</small></span>
             <p>Uma leitura abrangente para mapear amor, trabalho, finanças e caminhos espirituais com calma e profundidade.</p>
             <ul><li>60 minutos de imersão ao vivo</li><li>Perguntas ilimitadas dentro do tempo</li><li>Análise detalhada de causa e solução</li><li>Gravação da tiragem</li></ul>
             <span class="btn solid">Agendar 1 Hora no WhatsApp</span>
@@ -225,7 +241,7 @@ p { margin: 0; }
       <section><h5>Destaque</h5><p>Carta II maior/elevada, com selo e botão preenchido. Carta I com botão contornado.</p></section>
       <section><h5>Mobile</h5><p>Cartas empilhadas, com a Jornada Completa primeiro. Alternativa: carrossel com deslize lateral.</p></section>
       <section><h5>Botões</h5><p>Cada botão abre o WhatsApp com mensagem pronta, ex.: "Olá Gabriel, quero agendar a Jornada Completa (1 hora)".</p></section>
-      <p class="flag">A copy não traz <strong>valores</strong>. Vale decidir se o preço aparece na carta ou só no WhatsApp.</p>
+      <section><h5>Preço</h5><p>Valor em destaque logo abaixo do nome, antes da descrição. Pagamento via Pix, combinado no WhatsApp.</p></section>
     </aside>
   </article>
 
@@ -254,7 +270,7 @@ p { margin: 0; }
   <article class="block" id="b5">
     <header><span class="mono">Bloco 5</span><h2>Sobre Gabriel da Padilha</h2><span class="tag">autoridade</span></header>
     <div class="wf grid2" style="align-items:center">
-      <div class="ph photo"><span>Retrato do Gabriel</span></div>
+      <img class="photo-real" src="img/gabriel-carta.webp" alt="Gabriel da Padilha segurando a carta XIX, O Sol, na frente de um dos olhos">
       <div style="display:grid;gap:14px">
         <p class="mono">Sobre mim</p>
         <h3 class="t">Quem é Gabriel da Padilha</h3>
@@ -267,7 +283,8 @@ p { margin: 0; }
       <section><h5>Objetivo</h5><p>Criar conexão pessoal e confiança antes da decisão.</p></section>
       <section><h5>Conteúdo</h5><ul><li>Bio completa da copy em 2 parágrafos.</li><li>Uma frase da bio em destaque (citação).</li><li>Opcional: 3 marcadores curtos (2 anos de prática · Atendimento online · Sem julgamentos).</li></ul></section>
       <section><h5>Mobile</h5><p>Foto acima, texto abaixo.</p></section>
-      <p class="flag">A bio mistura <strong>você</strong> e <strong>tu</strong> ("tu tens", "enxergas"). O resto do site usa "você". Sugiro padronizar.</p>
+      <section><h5>Bio ajustada para "você"</h5><p>"…mostrando que <strong>você tem</strong> o poder de transformar a <strong>sua</strong> própria realidade quando <strong>enxerga</strong> as coisas com clareza."</p></section>
+      <section><h5>Foto</h5><p>Foto mais pessoal, com a carta O Sol. Complementa a de estúdio do hero sem repetir.</p></section>
     </aside>
   </article>
 
@@ -317,7 +334,7 @@ p { margin: 0; }
 
   <!-- 8 -->
   <article class="block" id="b8">
-    <header><span class="mono">Bloco 8</span><h2>CTA final + rodapé</h2><span class="tag">sugestão · fora da copy</span></header>
+    <header><span class="mono">Bloco 8</span><h2>CTA final + rodapé</h2><span class="tag">aprovado</span></header>
     <div class="wf">
       <div class="wf center" style="border-style:dashed">
         <h3 class="t">Pronta(o) para enxergar o seu caminho com clareza?</h3>
@@ -339,7 +356,7 @@ p { margin: 0; }
 
   <!-- fixo -->
   <article class="block" id="b9">
-    <header><span class="mono">Elemento fixo</span><h2>Botão flutuante do WhatsApp</h2><span class="tag">sugestão · fora da copy</span></header>
+    <header><span class="mono">Elemento fixo</span><h2>Botão flutuante do WhatsApp</h2><span class="tag">aprovado</span></header>
     <div class="wf float" style="min-height:160px">
       <div class="lines"><i></i><i></i><i></i><i></i><i></i></div>
       <div class="fab">WA</div>
@@ -351,13 +368,12 @@ p { margin: 0; }
   </article>
 
   <div class="closing">
-    <h2>Decisões em aberto</h2>
+    <h2>O que falta para o layout final</h2>
     <ol>
-      <li>Confirmar se esta é a copy certa (cartomancia) ou se falta a copy da mentoria de tráfego pago.</li>
-      <li>Mostrar ou não os valores nas cartas do Bloco 3.</li>
-      <li>Padronizar "você" ou "tu" na bio.</li>
-      <li>Aprovar os blocos sugeridos: faixa de 3 passos, CTA final, rodapé e botão flutuante.</li>
-      <li>Fotos do Gabriel e link do vídeo explicativo para o Bloco 4.</li>
+      <li>Número do WhatsApp usado nos botões.</li>
+      <li>Link do vídeo explicativo (Bloco 4) e do canal do YouTube (Bloco 6).</li>
+      <li>Frase de fechamento do CTA final (Bloco 8). No wireframe está como rascunho.</li>
+      <li>Links das redes para o rodapé (Instagram e outras, se houver).</li>
     </ol>
   </div>
 
