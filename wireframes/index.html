@@ -74,6 +74,13 @@ p { margin: 0; }
 .btn.solid { background: var(--ink); color: var(--sheet); }
 .btn::before { content: ""; width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid currentColor; flex: none; }
 .btn.noicon::before { display: none; }
+a.btn, .menu a, .sub a { color: inherit; }
+a.btn { text-decoration: none; }
+a.btn:focus-visible, .menu a:focus-visible { outline: 2px solid var(--note); outline-offset: 2px; }
+.links { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 16px; font-size: 15px; margin: 6px 0 0; }
+.links dt { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); padding-top: 2px; }
+.links dd { margin: 0; overflow-wrap: anywhere; }
+.links a { color: var(--ink); }
 .wf h3.t { font-family: var(--f-display); font-size: clamp(24px, 3.4vw, 36px); line-height: 1.15; max-width: 22ch; }
 .wf .sub { color: var(--ink-soft); max-width: 58ch; font-size: 15px; }
 .ph { position: relative; border: 1.5px solid var(--line); background:
@@ -146,6 +153,7 @@ p { margin: 0; }
         <li>Tratamento padronizado em "você", inclusive na bio.</li>
         <li>Faixa de 3 passos, CTA final, rodapé e botão flutuante aprovados.</li>
         <li>Fotos reais do Gabriel no hero e no Sobre.</li>
+        <li>WhatsApp, YouTube e Instagram ligados aos botões (clique para testar).</li>
       </ul>
     </div>
   </div>
@@ -169,7 +177,7 @@ p { margin: 0; }
       <div class="row between">
         <div class="logo">Gabriel da Padilha<small>Cartomancia &amp; Orientação</small></div>
         <nav class="menu"><span>Início</span><span>Consultas</span><span>Como Funciona</span><span>Sobre Mim</span><span>YouTube</span><span>Dúvidas</span></nav>
-        <span class="btn solid">Agendar no WhatsApp</span>
+        <a class="btn solid" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar no WhatsApp</a>
       </div>
     </div>
     <aside class="notes">
@@ -217,7 +225,7 @@ p { margin: 0; }
             <span class="price">R$ 80 <small>/ sessão</small></span>
             <p>Ideal para quem busca clareza imediata e direcionamento focado em questões pontuais.</p>
             <ul><li>30 minutos de conversa ao vivo</li><li>Perguntas ilimitadas dentro do tempo</li><li>Gravação da tiragem</li></ul>
-            <span class="btn">Agendar 30 Minutos no WhatsApp</span>
+            <a class="btn" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20a%20Sess%C3%A3o%20Imersiva%20%2830%20minutos%2C%20R%24%2080%29." target="_blank" rel="noopener">Agendar 30 Minutos no WhatsApp</a>
           </div>
         </div>
         <div class="card feat">
@@ -230,7 +238,7 @@ p { margin: 0; }
             <span class="price">R$ 140 <small>/ sessão</small></span>
             <p>Uma leitura abrangente para mapear amor, trabalho, finanças e caminhos espirituais com calma e profundidade.</p>
             <ul><li>60 minutos de imersão ao vivo</li><li>Perguntas ilimitadas dentro do tempo</li><li>Análise detalhada de causa e solução</li><li>Gravação da tiragem</li></ul>
-            <span class="btn solid">Agendar 1 Hora no WhatsApp</span>
+            <a class="btn solid" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20a%20Jornada%20Completa%20%281%20hora%2C%20R%24%20140%29." target="_blank" rel="noopener">Agendar 1 Hora no WhatsApp</a>
           </div>
         </div>
       </div>
@@ -240,7 +248,7 @@ p { margin: 0; }
       <section><h5>Interação das cartas</h5><ul><li><span class="pin">1</span> Ao entrar na tela, as cartas aparecem viradas e giram para a frente, uma depois da outra.</li><li><span class="pin">2</span> No hover a carta sobe e ganha brilho na moldura.</li><li><span class="pin">3</span> Preço, itens e botão ficam sempre na frente da carta. Não esconder o CTA atrás de um "virar".</li></ul></section>
       <section><h5>Destaque</h5><p>Carta II maior/elevada, com selo e botão preenchido. Carta I com botão contornado.</p></section>
       <section><h5>Mobile</h5><p>Cartas empilhadas, com a Jornada Completa primeiro. Alternativa: carrossel com deslize lateral.</p></section>
-      <section><h5>Botões</h5><p>Cada botão abre o WhatsApp com mensagem pronta, ex.: "Olá Gabriel, quero agendar a Jornada Completa (1 hora)".</p></section>
+      <section><h5>Botões</h5><p>Cada botão abre o WhatsApp (45) 92001-8219 com mensagem pronta, ex.: "Olá Gabriel, quero agendar a Jornada Completa (1 hora, R$ 140)". Os botões deste wireframe já funcionam.</p></section>
       <section><h5>Preço</h5><p>Valor em destaque logo abaixo do nome, antes da descrição. Pagamento via Pix, combinado no WhatsApp.</p></section>
     </aside>
   </article>
@@ -251,7 +259,7 @@ p { margin: 0; }
     <div class="wf center">
       <h3 class="t">Como Funciona o Meu Atendimento</h3>
       <p class="sub">Assista ao vídeo abaixo para entender como nos conectamos durante a videochamada e o que esperar da sua consulta.</p>
-      <div class="ph video" style="max-width:720px"><span>▶ Player do YouTube (16:9)</span></div>
+      <div class="ph video" style="max-width:720px"><span>▶ Vídeo em gravação<br>entra aqui quando estiver pronto</span></div>
       <div class="grid3" style="width:100%;max-width:720px;text-align:left">
         <div><p class="mono">Passo 1</p><p>Escolha a modalidade e chame no WhatsApp</p></div>
         <div><p class="mono">Passo 2</p><p>Confirme dia, horário e pagamento via Pix</p></div>
@@ -261,6 +269,7 @@ p { margin: 0; }
     <aside class="notes">
       <section><h5>Objetivo</h5><p>Tirar o medo do desconhecido: mostrar como é a chamada antes de agendar.</p></section>
       <section><h5>Comportamento</h5><p>Mostrar uma capa (thumbnail + botão play) e só carregar o player do YouTube no clique. A página fica mais leve.</p></section>
+      <section><h5>Enquanto o vídeo não existe</h5><p>O site pode ir ao ar sem ele: o bloco mostra só título, subtítulo e os 3 passos. Quando o vídeo for publicado no canal, basta colar o link e o player aparece acima dos passos.</p></section>
       <section><h5>Sugestão</h5><p>Faixa de 3 passos abaixo do vídeo, com textos tirados do FAQ. Ajuda quem não vai dar play.</p></section>
       <section><h5>Mobile</h5><p>Vídeo em largura total; passos empilhados.</p></section>
     </aside>
@@ -297,7 +306,7 @@ p { margin: 0; }
           <h3 class="t">Transmissões &amp; Ensinamentos Espirituais</h3>
           <p class="sub">Acompanhe meus vídeos no YouTube para tiragens coletivas, orientações da espiritualidade e reflexões.</p>
         </div>
-        <span class="btn">Inscrever-se no Canal</span>
+        <a class="btn" href="https://www.youtube.com/@gabriel_da_padilha?sub_confirmation=1" target="_blank" rel="noopener">Inscrever-se no Canal</a>
       </div>
       <div class="grid3">
         <div style="display:grid;gap:6px"><div class="ph thumb"><span>Vídeo recente</span></div><div class="lines"><i></i><i></i></div></div>
@@ -308,6 +317,7 @@ p { margin: 0; }
     <aside class="notes">
       <section><h5>Objetivo</h5><p>Levar quem ainda não está pronto para agendar para o canal, e manter o contato.</p></section>
       <section><h5>Conteúdo</h5><p>3 miniaturas de vídeos (tiragens coletivas, por exemplo) com link para o YouTube. Podem ser fixas ou atualizadas à mão.</p></section>
+      <section><h5>Link</h5><p>Botão leva para youtube.com/@gabriel_da_padilha já com a confirmação de inscrição aberta.</p></section>
       <section><h5>Mobile</h5><p>Miniaturas em carrossel horizontal; botão de inscrição em largura total.</p></section>
     </aside>
   </article>
@@ -323,7 +333,7 @@ p { margin: 0; }
         <div>Como faço para agendar e pagar?</div>
         <div>O que preciso preparar para o dia do atendimento?</div>
       </div>
-      <p class="sub" style="margin-top:8px">Ainda tem dúvida? <u>Fale comigo no WhatsApp</u></p>
+      <p class="sub" style="margin-top:8px">Ainda tem dúvida? <a href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20consulta." target="_blank" rel="noopener">Fale comigo no WhatsApp</a></p>
     </div>
     <aside class="notes">
       <section><h5>Objetivo</h5><p>Responder as últimas dúvidas antes do agendamento.</p></section>
@@ -338,12 +348,12 @@ p { margin: 0; }
     <div class="wf">
       <div class="wf center" style="border-style:dashed">
         <h3 class="t">Pronta(o) para enxergar o seu caminho com clareza?</h3>
-        <div class="row" style="justify-content:center"><span class="btn">Sessão 30 min</span><span class="btn solid">Jornada 1 hora</span></div>
+        <div class="row" style="justify-content:center"><a class="btn" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20a%20Sess%C3%A3o%20Imersiva%20%2830%20minutos%2C%20R%24%2080%29." target="_blank" rel="noopener">Sessão 30 min · R$ 80</a><a class="btn solid" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20a%20Jornada%20Completa%20%281%20hora%2C%20R%24%20140%29." target="_blank" rel="noopener">Jornada 1 hora · R$ 140</a></div>
       </div>
       <div class="row between" style="border-top:1px solid var(--line);padding-top:16px;align-items:start">
         <div class="logo">Gabriel da Padilha<small>Cartomancia &amp; Orientação</small></div>
         <nav class="menu"><span>Consultas</span><span>Como Funciona</span><span>Sobre Mim</span><span>Dúvidas</span></nav>
-        <div class="menu"><span>WhatsApp</span><span>YouTube</span><span>Instagram</span></div>
+        <div class="menu"><a href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">WhatsApp (45) 92001-8219</a><a href="https://www.youtube.com/@gabriel_da_padilha" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/gabrieldapadilha_/" target="_blank" rel="noopener">Instagram</a></div>
       </div>
       <div class="lines" style="max-width:560px"><i></i></div>
       <p class="mono" style="text-transform:none">Aviso legal · © 2026 Gabriel da Padilha</p>
@@ -359,7 +369,7 @@ p { margin: 0; }
     <header><span class="mono">Elemento fixo</span><h2>Botão flutuante do WhatsApp</h2><span class="tag">aprovado</span></header>
     <div class="wf float" style="min-height:160px">
       <div class="lines"><i></i><i></i><i></i><i></i><i></i></div>
-      <div class="fab">WA</div>
+      <a class="fab" href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Agendar no WhatsApp" style="color:inherit;text-decoration:none">WA</a>
     </div>
     <aside class="notes">
       <section><h5>Objetivo</h5><p>Manter o agendamento sempre visível, principalmente no celular, onde o botão do header some.</p></section>
@@ -368,12 +378,16 @@ p { margin: 0; }
   </article>
 
   <div class="closing">
+    <h2>Contatos do site</h2>
+    <dl class="links">
+      <dt>WhatsApp</dt><dd><a href="https://wa.me/5545920018219?text=Ol%C3%A1%20Gabriel%2C%20quero%20agendar%20uma%20consulta." target="_blank" rel="noopener">(45) 92001-8219</a></dd>
+      <dt>YouTube</dt><dd><a href="https://www.youtube.com/@gabriel_da_padilha" target="_blank" rel="noopener">youtube.com/@gabriel_da_padilha</a></dd>
+      <dt>Instagram</dt><dd><a href="https://www.instagram.com/gabrieldapadilha_/" target="_blank" rel="noopener">instagram.com/gabrieldapadilha_</a></dd>
+    </dl>
     <h2>O que falta para o layout final</h2>
     <ol>
-      <li>Número do WhatsApp usado nos botões.</li>
-      <li>Link do vídeo explicativo (Bloco 4) e do canal do YouTube (Bloco 6).</li>
+      <li>Vídeo explicativo do Bloco 4 (em gravação). O site pode ir ao ar antes, sem o player.</li>
       <li>Frase de fechamento do CTA final (Bloco 8). No wireframe está como rascunho.</li>
-      <li>Links das redes para o rodapé (Instagram e outras, se houver).</li>
     </ol>
   </div>
 
